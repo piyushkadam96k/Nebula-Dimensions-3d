@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Dimensions | 3D Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-black">
+        <div class="text-center">
+            <div class="loader mb-4"></div>
+            <h2 class="text-2xl font-bold text-purple-500">Entering Nebula Dimensions</h2>
+        </div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-40 transition-all duration-500" id="main-nav">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo-container">
+                <a href="#" class="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+                    Nebula Dimensions
+                </a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#explore" class="nav-link">Explore</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90 w-full">
+            <div class="container mx-auto px-4 py-4">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#explore" class="mobile-nav-link">Explore</a></li>
+                    <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="#about" class="mobile-nav-link">About</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center relative">
+            <div class="container mx-auto px-4 py-20 z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                        <span class="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
+                            Explore The Cosmic Dimensions
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-300">
+                        An immersive journey through space and time
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#explore" class="btn-primary">
+                            Start Journey <i class="fas fa-rocket ml-2"></i>
+                        </a>
+                        <a href="#about" class="btn-secondary">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#explore" class="text-white opacity-70 hover:opacity-100 transition-opacity">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Explore Section -->
+        <section id="explore" class="min-h-screen py-20 relative">
+            <div class="container mx-auto px-4 z-10 relative">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Explore Dimensions</h2>
+                    <p class="section-subtitle">Discover unique cosmic environments</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="dimension-card">
+                        <div class="card-image-container">
+                            <div class="card-image bg-gradient-to-br from-purple-500 to-blue-600"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nebula Cloud</h3>
+                            <p class="card-description">
+                                Explore the colorful cosmic clouds where stars are born.
+                            </p>
+                            <button class="card-button">
+                                Explore <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="dimension-card">
+                        <div class="card-image-container">
+                            <div class="card-image bg-gradient-to-br from-red-500 to-yellow-500"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Solar Flares</h3>
+                            <p class="card-description">
+                                Witness the powerful energy bursts from stellar surfaces.
+                            </p>
+                            <button class="card-button">
+                                Explore <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="dimension-card">
+                        <div class="card-image-container">
+                            <div class="card-image bg-gradient-to-br from-blue-400 to-teal-500"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Quantum Realm</h3>
+                            <p class="card-description">
+                                Dive into the microscopic world of quantum particles.
+                            </p>
+                            <button class="card-button">
+                                Explore <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="min-h-screen py-20 relative">
+            <div class="container mx-auto px-4 z-10 relative">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">3D Gallery</h2>
+                    <p class="section-subtitle">Immersive cosmic visualizations</p>
+                </div>
+                
+                <div class="gallery-container">
+                    <div id="gallery-scene" class="h-[500px] w-full rounded-xl overflow-hidden relative">
+                        <!-- 3D Gallery will be rendered here -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <p class="text-xl text-gray-400">3D Gallery Loading...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex justify-center space-x-4">
+                        <button id="prev-model" class="gallery-btn">
+                            <i class="fas fa-chevron-left mr-2"></i> Previous
+                        </button>
+                        <button id="next-model" class="gallery-btn">
+                            Next <i class="fas fa-chevron-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen py-20 relative">
+            <div class="container mx-auto px-4 z-10 relative">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">About The Project</h2>
+                    <p class="section-subtitle">The story behind Nebula Dimensions</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="about-image-container">
+                        <div class="about-image bg-gradient-to-br from-purple-600 to-blue-700 rounded-lg h-80 lg:h-96"></div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-400">Our Mission</h3>
+                        <p class="mb-6 text-gray-300">
+                            Nebula Dimensions was created to bring the wonders of the cosmos to your screen through immersive 3D experiences. Our team of designers and developers are passionate about space exploration and cutting-edge web technologies.
+                        </p>
+                        <p class="mb-6 text-gray-300">
+                            We combine artistic vision with technical expertise to create visually stunning and educational cosmic journeys that inspire curiosity about our universe.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen py-20 relative">
+            <div class="container mx-auto px-4 z-10 relative">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle">Reach out for collaborations or questions</p>
+                </div>
+                
+                <div class="max-w-2xl mx-auto">
+                    <form class="contact-form">
+                        <div class="mb-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Your name">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="Your email">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" rows="5" class="form-input" placeholder="Your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+                        Nebula Dimensions
+                    </a>
+                </div>
+                
+                <div class="text-gray-400 text-sm">
+                    &copy; 2023 Nebula Dimensions. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
