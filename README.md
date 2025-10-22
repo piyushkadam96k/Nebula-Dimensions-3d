@@ -2,9 +2,8 @@
 
 A fully responsive and immersive 3D website showcasing cosmic environments with modern UI, interactive starfields, and smooth controls. Perfect for demos, portfolios, or creative experiences.
 
-![Nebula Preview](https://i.postimg.cc/JzBWVhW4/my-avatar.png) <!-- replace with project screenshot -->
 
-[Live Demo](https://your-username.github.io/your-repo-name) 🚀 | ![Made with Three.js](https://img.shields.io/badge/Three.js-Style-Blue)
+[Live Demo]([https://your-username.github.io/your-repo-name](https://piyushkadam96k.github.io/Nebula-Dimensions-3d/)) 🚀 | ![Made with Three.js]([https://img.shields.io/badge/Three.js-Style-Blue](https://piyushkadam96k.github.io/Nebula-Dimensions-3d/))
 
 ## ✨ Highlights
 
